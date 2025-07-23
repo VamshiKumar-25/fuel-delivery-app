@@ -1,25 +1,27 @@
 const express = require('express');
 const router = express.Router();
 
-const {
-  registerUser,
-  loginUser,
-  forgotPassword,
-  resetPassword,
-  getUserProfile,
-  updateUserProfile
-} = require('../controllers/userController.js');
+const { 
+  addOrderItems, 
+  getMyOrders, 
+  getOrders, 
+  updateOrderStatus,
+  getOrderById,
+  getOrderByCustomId
+} = require('../controllers/orderController.js');
 
-const { protect } = require('../middleware/authMiddleware.js');
+const { protect, admin } = require('../middleware/authMiddleware.js');
 
-// --- Public Routes ---
-router.post('/', registerUser);
-router.post('/login', loginUser);
-router.post('/forgotpassword', forgotPassword);
-router.put('/resetpassword/:resettoken', resetPassword);
+// --- Customer Routes ---
+router.post('/', protect, addOrderItems);
+router.get('/myorders', protect, getMyOrders); // This is the route that's missing on the server
 
-// --- Private/Protected Routes ---
-router.get('/profile', protect, getUserProfile);
-router.put('/profile', protect, updateUserProfile);
+// --- Admin Routes ---
+router.get('/', protect, admin, getOrders);
+router.put('/:id/status', protect, admin, updateOrderStatus);
+
+// --- Public Tracking Routes ---
+router.get('/trackbyid/:customId', getOrderByCustomId);
+router.get('/:id', getOrderById);
 
 module.exports = router;
