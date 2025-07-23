@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import api from '../context/AuthContext';
-import Header from '../components/shared/Header';
 import Modal from '../components/shared/Modal';
 import OrderStatusTracker from '../components/shared/OrderStatusTracker';
 import styles from './AdminOrderManagement.module.css';

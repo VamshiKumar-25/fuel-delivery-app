@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
 import api from '../context/AuthContext';
-import Header from '../components/shared/Header';
 import styles from './AdminFuelManagement.module.css';
 
 const AdminFuelManagement = () => {
