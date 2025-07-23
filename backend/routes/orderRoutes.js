@@ -1,10 +1,10 @@
 const express = require('express');
 const router = express.Router();
 
-const { 
-  registerUser, 
-  loginUser, 
-  forgotPassword, 
+const {
+  registerUser,
+  loginUser,
+  forgotPassword,
   resetPassword,
   getUserProfile,
   updateUserProfile
