@@ -1,0 +1,126 @@
+.page {
+  /* The global index.css handles the dark background and font */
+  color: var(--text-primary);
+}
+
+.hero {
+  background: linear-gradient(rgba(26, 34, 56, 0.8), rgba(26, 34, 56, 0.8)), url('fuel.jpeg') no-repeat center center/cover;
+  text-align: center;
+  padding: 5rem 1rem;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  text-shadow: 0 0 10px var(--primary-glow);
+  margin-bottom: 0.5rem;
+}
+
+.hero p {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 3rem 1rem;
+}
+
+.section {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+
+.sectionIcon {
+  font-size: 2.5rem;
+  color: var(--primary-glow);
+  margin-bottom: 1rem;
+}
+
+.section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.teamGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  margin-top: 2rem;
+}
+
+.teamMember {
+  background-color: var(--card-background);
+  padding: 2rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.teamMember:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.teamMember img {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 3px solid var(--primary-glow);
+  margin-bottom: 1rem;
+}
+
+.teamMember h3 {
+  font-size: 1.25rem;
+  margin-bottom: 0.25rem;
+  color: var(--text-primary);
+}
+
+.teamMember p {
+  color: var(--text-secondary);
+  margin: 0;
+}
+
+/* ... (keep all your existing styles above this line) ... */
+
+
+/* =================================== */
+/* --- Mobile Responsive Styles --- */
+/* =================================== */
+
+@media (max-width: 768px) {
+  /* Adjust hero section for mobile */
+  .hero {
+    padding: 3rem 1rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  /* Adjust main content padding and titles */
+  .container {
+    padding: 2rem 1rem;
+  }
+
+  .section {
+    margin-bottom: 3rem;
+  }
+
+  .section h2 {
+    font-size: 1.75rem;
+  }
+}

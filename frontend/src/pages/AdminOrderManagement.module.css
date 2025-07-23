@@ -1,0 +1,166 @@
+/* --- Page Layout --- */
+.pageBackground {
+  min-height: 100vh;
+}
+
+.mainContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.mainContainer h1 {
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 2rem;
+  text-shadow: 0 0 8px var(--primary-glow);
+}
+
+.error {
+  color: #ffc4c4;
+  background-color: var(--error-background);
+  border: 1px solid var(--error-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+/* --- Table Styles --- */
+.tableContainer {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 1rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow-x: auto;
+}
+
+.ordersTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ordersTable th,
+.ordersTable td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+  white-space: nowrap;
+}
+
+.ordersTable thead {
+  background-color: #1a202c;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.ordersTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ordersTable tbody tr:hover {
+  background-color: #38455a;
+}
+
+/* --- Status Badge Styles --- */
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: 1px solid;
+}
+.statusPending { background-color: #fefcbf20; color: #fef08a; border-color: #fef08a; }
+.statusConfirmed { background-color: #bee3f820; color: #90cdf4; border-color: #90cdf4; }
+.statusOutforDelivery { background-color: #feebc820; color: #f6ad55; border-color: #f6ad55; }
+.statusDelivered { background-color: #c6f6d520; color: #68d391; border-color: #68d391; }
+.statusCancelled { background-color: #fed7d720; color: #f56565; border-color: #f56565; }
+.statusGray { background-color: #e2e8f020; color: #a0aec0; border-color: #a0aec0; }
+
+
+/* --- Modal & Button Styles --- */
+.detailsButton {
+  background: transparent;
+  border: 1px solid var(--primary-glow);
+  color: var(--primary-glow);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.detailsButton:hover {
+  background-color: var(--primary-glow);
+  color: var(--card-background);
+}
+
+.modalContent h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 1.5rem;
+}
+
+.modalDetails {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.modalDetails p {
+  color: var(--text-secondary);
+}
+
+.modalDetails p strong {
+  color: var(--text-primary);
+  display: block;
+  margin-bottom: 0.25rem;
+}
+
+.modalActions {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.modalActions label {
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.statusSelect {
+    padding: 0.5rem;
+    border-radius: 6px;
+    border: 1px solid var(--border-color);
+    background-color: var(--background-dark);
+    color: var(--text-primary);
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.statusSelect:focus {
+    outline: none;
+    box-shadow: 0 0 0 3px var(--primary-glow);
+}
+
+
+/* =================================== */
+/* --- Mobile Responsive Styles --- */
+/* =================================== */
+
+@media (max-width: 768px) {
+  .mainContainer {
+    padding: 1rem;
+  }
+
+  .mainContainer h1 {
+    font-size: 1.75rem;
+  }
+}

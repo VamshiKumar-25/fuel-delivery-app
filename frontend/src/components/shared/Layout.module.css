@@ -1,0 +1,9 @@
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.mainContent {
+  flex: 1; /* This is the key property that makes the main content area grow and push the footer to the bottom of the page. */
+}

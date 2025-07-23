@@ -1,0 +1,28 @@
+/* Import the Inter font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+
+/* Define global CSS variables for our theme */
+:root {
+  --background-dark: #1a202c;
+  --card-background: #2d3748;
+  --primary-glow: #38b2ac;
+  --secondary-glow: #9f7aea;
+  --text-primary: #e2e8f0;
+  --text-secondary: #a0aec0;
+  --border-color: #4a5568;
+  --error-color: #c53030;
+  --error-background: #f1a0a02d;
+}
+
+body {
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  background-color: var(--background-dark);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;

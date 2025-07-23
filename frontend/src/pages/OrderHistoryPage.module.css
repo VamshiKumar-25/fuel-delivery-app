@@ -1,0 +1,78 @@
+.mainContainer {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.mainContainer h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 2rem;
+}
+
+.tableContainer {
+    background-color: var(--card-background);
+    border: 1px solid var(--border-color);
+    border-radius: 0.75rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.ordersTable {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.ordersTable th,
+.ordersTable td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.ordersTable thead tr {
+  background-color: #1a202c;
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.ordersTable tbody tr {
+  transition: background-color 0.2s ease-in-out;
+}
+
+.ordersTable tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.ordersTable tbody tr:hover {
+  background-color: #38455a;
+}
+
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  display: inline-block;
+  border: 1px solid;
+}
+
+.statusPending {
+  background-color: #fefcbf20;
+  color: #fef08a;
+  border-color: #fef08a;
+}
+
+/* Add similar neon/dark styles for other statuses */
+
+.orderIdLink {
+  color: var(--primary-glow);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.orderIdLink:hover {
+  text-decoration: underline;
+}

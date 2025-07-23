@@ -1,0 +1,110 @@
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  font-family: 'Inter', sans-serif;
+}
+
+.container h1 {
+  text-align: center;
+  font-size: 2.25rem;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+  text-shadow: 0 0 8px var(--primary-glow);
+}
+
+.subtitle {
+  text-align: center;
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  margin-bottom: 2.5rem;
+}
+
+.profileForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.formSection {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  border-radius: 1rem;
+  padding: 2rem;
+}
+
+.formSection h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.25rem;
+}
+
+.sectionDescription {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+}
+
+.formGroup {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1.25rem;
+}
+
+.formGroup label {
+  font-weight: 600;
+  color: var(--text-secondary);
+  margin-bottom: 0.5rem;
+}
+
+.formGroup input {
+  padding: 0.75rem;
+  border-radius: 8px;
+  background-color: var(--background-dark);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.formGroup input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--primary-glow);
+  border-color: var(--primary-glow);
+}
+
+.submitButton {
+  background: linear-gradient(90deg, var(--primary-glow), var(--secondary-glow));
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1.125rem;
+  cursor: pointer;
+  transition: box-shadow 0.3s;
+}
+
+.submitButton:hover {
+  box-shadow: 0 0 15px var(--primary-glow);
+}
+
+.message {
+  color: #68d391; /* Green */
+  background-color: rgba(104, 211, 145, 0.1);
+  border: 1px solid #68d391;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+}
+
+.error {
+  color: #ffc4c4;
+  background-color: var(--error-background);
+  border: 1px solid var(--error-color);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  text-align: center;
+  font-weight: 500;
+}

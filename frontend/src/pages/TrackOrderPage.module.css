@@ -1,0 +1,309 @@
+.page {
+  /* The global index.css handles the dark background */
+  min-height: 100vh;
+  font-family: 'Inter', sans-serif;
+  padding: 2rem;
+}
+
+.container {
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.titleSection {
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: var(--card-background);
+  color: var(--primary-glow);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  font-size: 0.875rem;
+  margin-bottom: 1rem;
+}
+
+.titleSection h1 {
+  font-size: 2.5rem;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  text-shadow: 0 0 8px var(--primary-glow);
+}
+
+.titleSection p {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+}
+
+.formCard {
+  background-color: var(--card-background);
+  padding: 2rem;
+  border-radius: 12px;
+  border: 1px solid var(--border-color);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.formCard h2 {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 1.25rem;
+  margin-bottom: 1.5rem;
+  font-weight: 600;
+  color: var(--text-primary);
+}
+
+.formCard label {
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+  display: block;
+  color: var(--text-secondary);
+}
+
+.formCard form {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-end;
+}
+
+.formCard input {
+  flex-grow: 1;
+  padding: 0.75rem;
+  border-radius: 8px;
+  background-color: var(--background-dark);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  font-size: 1rem;
+}
+
+.formCard input:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--primary-glow);
+  border-color: var(--primary-glow);
+}
+
+.formCard button {
+  background: linear-gradient(90deg, var(--primary-glow), var(--secondary-glow));
+  color: white;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  font-weight: 700;
+  cursor: pointer;
+  transition: box-shadow 0.3s, transform 0.2s;
+}
+
+.formCard button:hover {
+  box-shadow: 0 0 15px var(--primary-glow);
+  transform: scale(1.02);
+}
+
+.error {
+  color: #ffc4c4;
+  margin-top: 1rem;
+  font-weight: 500;
+}
+
+/* --- Status Result --- */
+.statusResult {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.statusResult h3 {
+  font-size: 1.25rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+.statusDetails p {
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+.statusDetails strong {
+  color: var(--text-primary);
+}
+
+
+/* Status Badge Styles */
+.status {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  border: 1px solid;
+}
+.statusPending { background-color: #fefcbf20; color: #fef08a; border-color: #fef08a; }
+.statusConfirmed { background-color: #bee3f820; color: #90cdf4; border-color: #90cdf4; }
+.statusOutforDelivery { background-color: #feebc820; color: #f6ad55; border-color: #f6ad55; }
+.statusDelivered { background-color: #c6f6d520; color: #68d391; border-color: #68d391; }
+.statusCancelled { background-color: #fed7d720; color: #f56565; border-color: #f56565; }
+
+
+/* --- Status Result --- */
+.statusResult {
+  background-color: var(--card-background);
+  border: 1px solid var(--border-color);
+  margin-top: 2rem;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.statusHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.statusHeader h3 {
+  font-size: 1.25rem;
+  color: var(--text-primary);
+}
+.statusHeader p {
+  color: var(--text-secondary);
+  font-weight: 500;
+}
+
+.statusDetails {
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid var(--border-color);
+}
+.statusDetails p {
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+.statusDetails strong {
+  color: var(--text-primary);
+}
+
+/* --- Timeline Styles --- */
+.timeline {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.timelineStep {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  text-align: center;
+}
+
+.timelineNode {
+  width: 50px;
+  height: 50px;
+  background-color: var(--border-color);
+  color: var(--card-background);
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+.timelineLine {
+  position: absolute;
+  top: 24px; 
+  left: 50%;
+  width: 100%;
+  height: 4px;
+  background-color: var(--border-color);
+  z-index: 0;
+  transition: background-color 0.3s ease;
+}
+
+/* Remove the line from the last step */
+.timelineStep:last-child .timelineLine {
+  display: none;
+}
+
+.timelineContent {
+  margin-top: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+}
+
+/* --- Active & Completed States --- */
+.timelineStep.active .timelineNode,
+.timelineStep.completed .timelineNode {
+  background-color: var(--primary-glow);
+  box-shadow: 0 0 10px var(--primary-glow);
+}
+
+.timelineStep.active .timelineContent {
+  color: var(--primary-glow);
+}
+
+.timelineStep.completed .timelineContent {
+    color: var(--text-primary);
+}
+
+.timelineStep.completed .timelineLine {
+  background-color: var(--primary-glow);
+}
+
+/* ... (keep all your existing styles above this line) ... */
+
+
+/* =================================== */
+/* --- Mobile Responsive Styles --- */
+/* =================================== */
+
+@media (max-width: 768px) {
+  .page {
+    padding: 1rem; /* Reduce overall page padding */
+  }
+
+  .container {
+    margin: 1rem auto; /* Reduce top margin */
+  }
+
+  .titleSection h1 {
+    font-size: 1.75rem; /* Smaller main title */
+  }
+
+  .titleSection p {
+    font-size: 1rem;
+  }
+
+  .formCard form {
+    flex-direction: column; /* Stack the input and button */
+    align-items: stretch; /* Make them full width */
+  }
+  
+  .formCard label {
+    /* The label is visually hidden but good for accessibility, no changes needed */
+  }
+
+  /* --- Timeline Adjustments --- */
+  .timelineContent p {
+    font-size: 0.75rem; /* Smaller text for timeline steps */
+  }
+
+  .timelineNode {
+    width: 40px; /* Smaller nodes */
+    height: 40px;
+    font-size: 1.25rem;
+  }
+
+  .timelineLine {
+    top: 19px; /* Re-center the line with the smaller node */
+  }
+}
