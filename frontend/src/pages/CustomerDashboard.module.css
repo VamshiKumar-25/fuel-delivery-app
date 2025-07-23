@@ -1,272 +1,158 @@
-/* Using global variables from index.css */
+/* =================================== */
+/* --- Mobile First Styles (Base) --- */
+/* =================================== */
+
 .page {
   font-family: 'Inter', sans-serif;
   background-color: var(--background-dark);
 }
 
 .hero {
-  background-color: #1a2238; /* A deep, dark blue */
+  background-color: #1a2238;
   color: white;
-  padding: 6rem 2rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.heroContainer {
-  max-width: 1200px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  gap: 2rem;
-}
-
-.heroContent {
-  flex: 1;
+  padding: 3rem 1.5rem;
+  text-align: center;
 }
 
 .heroContent h1 {
-  font-size: 3.5rem; /* 56px */
+  font-size: 2.25rem;
   font-weight: 700;
   line-height: 1.2;
   margin-bottom: 1rem;
 }
 
 .heroContent h2 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   color: var(--primary-glow);
   font-weight: 600;
   margin-bottom: 1.5rem;
 }
 
 .heroContent p {
-  font-size: 1.125rem;
+  font-size: 1rem;
   color: var(--text-secondary);
-  max-width: 500px;
   margin-bottom: 2rem;
 }
 
 .ctaButton {
   background: linear-gradient(90deg, var(--primary-glow), var(--secondary-glow));
   color: white;
-  border: none;
-  padding: 1rem 2rem;
+  padding: 0.85rem 1.5rem;
   border-radius: 0.5rem;
   font-weight: 700;
-  font-size: 1.125rem;
-  cursor: pointer;
   text-decoration: none;
   display: inline-block;
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
-}
-
-.ctaButton:hover {
-  box-shadow: 0 0 20px var(--primary-glow);
-  transform: scale(1.05);
 }
 
 .heroImage {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  margin-top: 2rem;
 }
 
 .heroImage img {
   max-width: 100%;
   border-radius: 1rem;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
 }
 
-/* Features Section */
-.features {
-  padding: 4rem 2rem;
-  background-color: var(--background-dark);
-}
-
-.featuresContainer {
-  max-width: 1200px;
-  margin: 0 auto;
+.features, .fuelSection, .ctaSection {
+  padding: 3rem 1.5rem;
   text-align: center;
 }
 
-.features h2 {
-  font-size: 2.5rem;
+.features h2, .fuelContainer h2, .ctaContainer h2 {
+  font-size: 1.75rem;
   font-weight: 700;
   margin-bottom: 1rem;
 }
 
-.features p {
-  font-size: 1.125rem;
+.features p, .fuelContainer p, .ctaContainer p {
   color: var(--text-secondary);
-  margin-bottom: 3rem;
+  margin: 0 auto 2.5rem auto;
+  max-width: 500px;
 }
 
-.featureGrid {
+.featureGrid, .fuelGrid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-}
-
-.featureCard {
-  background-color: var(--card-background);
-  padding: 2rem;
-  border-radius: 1rem;
-  border: 1px solid var(--border-color);
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
   text-align: left;
 }
 
+.featureCard, .fuelCard {
+  background: var(--card-background);
+  padding: 1.5rem;
+  border-radius: 1rem;
+  border: 1px solid var(--border-color);
+}
+
 .featureIcon {
-  font-size: 2.5rem;
+  font-size: 2rem;
   color: var(--primary-glow);
   margin-bottom: 1rem;
 }
 
-.featureCard h3 {
+.featureCard h3, .fuelCard h3 {
   font-size: 1.25rem;
   font-weight: 600;
   margin-bottom: 0.5rem;
 }
 
-.featureCard p {
-  font-size: 1rem;
-  color: var(--text-secondary);
-  margin-bottom: 0;
-}
-
-.ctaSection {
-  background-color: var(--card-background);
-  padding: 4rem 2rem;
-  border-top: 1px solid var(--border-color);
-}
-
-.ctaContainer {
-  max-width: 800px;
-  margin: 0 auto;
-  text-align: center;
-}
-
-.ctaContainer h2 {
-  font-size: 2.5rem;
-  font-weight: 700;
-  margin-bottom: 1rem;
-}
-
-.ctaContainer p {
-  font-size: 1.125rem;
-  color: var(--text-secondary);
-  margin-bottom: 2rem;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-/* --- NEW/RE-INTEGRATED: Fuel Section Styles --- */
-.fuelSection {
-  padding: 4rem 2rem;
-  background-color: var(--background-dark);
-}
-
-.fuelContainer {
-    max-width: 1200px;
-    margin: 0 auto;
-    text-align: center;
-}
-
-.fuelContainer h2 {
-    font-size: 2.5rem;
-    font-weight: 700;
-    margin-bottom: 3rem;
-}
-
-.fuelGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 2rem;
-  text-align: center;
-}
-
-.fuelCard {
-  background: linear-gradient(145deg, var(--card-background), #252e3d);
-  border-radius: 1rem;
-  padding: 1.5rem;
-  border: 1px solid var(--border-color);
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.fuelCard:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 0 25px var(--primary-glow);
-}
-
-.fuelCard h3 {
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--text-primary);
-  margin-bottom: 0.5rem;
-}
-
 .fuelPrice {
-  font-size: 1.125rem;
   color: var(--text-secondary);
-  margin-bottom: 2rem;
-  flex-grow: 1; /* Pushes the button to the bottom */
+  margin-bottom: 1.5rem;
+  flex-grow: 1;
 }
 
 .orderButton {
   background: linear-gradient(90deg, var(--primary-glow), var(--secondary-glow));
   color: white;
   border: none;
-  padding: 0.85rem 1rem;
+  padding: 0.75rem 1rem;
   border-radius: 0.5rem;
   font-weight: 700;
   font-size: 1rem;
   cursor: pointer;
   text-decoration: none;
-  transition: box-shadow 0.3s ease, transform 0.2s ease;
 }
 
-.orderButton:hover {
-  box-shadow: 0 0 15px var(--primary-glow);
-  transform: scale(1.05);
-}
+/* =================================== */
+/* --- Desktop Styles --- */
+/* =================================== */
 
-
-/* ... (add this at the end of the file) ... */
-/* ... keep all your existing styles above this line ... */
-
-@media (max-width: 768px) {
-  .heroContainer {
-    flex-direction: column;
-    text-align: center;
+@media (min-width: 768px) {
+  .hero {
+    padding: 6rem 2rem;
   }
-  .heroContent h1 {
+  
+  .heroContainer {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+    margin: 0 auto;
+    text-align: left;
+  }
+
+  .heroContent { flex: 1; }
+  .heroImage { flex: 1; margin-top: 0; }
+  .heroContent h1 { font-size: 3.5rem; }
+  .heroContent h2 { font-size: 1.5rem; }
+  .heroContent p { font-size: 1.125rem; }
+  
+  .features, .fuelSection, .ctaSection {
+    padding: 4rem 2rem;
+  }
+
+  .features h2, .fuelContainer h2, .ctaContainer h2 {
     font-size: 2.5rem;
   }
-  .heroImage {
-    margin-top: 2rem;
-  }
-  .section h2 {
-    font-size: 2rem;
-  }
-
-  /* --- NEW: Adjust spacing for fuel section on mobile --- */
-  .fuelSection {
-    padding: 3rem 1rem; /* Reduced padding */
-  }
-  .fuelContainer h2 {
-    font-size: 1.75rem; /* Smaller title */
-    margin-bottom: 2rem;
-  }
-  .fuelGrid {
-    grid-template-columns: 1fr; /* Ensures a single column layout */
-  }
-
-  /* --- (Existing rule for feature grid) --- */
+  
   .featureGrid {
-    grid-template-columns: 1fr;
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .fuelGrid {
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   }
 }
