@@ -236,7 +236,8 @@
 
 
 /* ... (add this at the end of the file) ... */
-/* ... add at the end of the file ... */
+/* ... keep all your existing styles above this line ... */
+
 @media (max-width: 768px) {
   .heroContainer {
     flex-direction: column;
@@ -251,7 +252,21 @@
   .section h2 {
     font-size: 2rem;
   }
-  .fuelGrid, .featureGrid {
+
+  /* --- NEW: Adjust spacing for fuel section on mobile --- */
+  .fuelSection {
+    padding: 3rem 1rem; /* Reduced padding */
+  }
+  .fuelContainer h2 {
+    font-size: 1.75rem; /* Smaller title */
+    margin-bottom: 2rem;
+  }
+  .fuelGrid {
+    grid-template-columns: 1fr; /* Ensures a single column layout */
+  }
+
+  /* --- (Existing rule for feature grid) --- */
+  .featureGrid {
     grid-template-columns: 1fr;
   }
 }
