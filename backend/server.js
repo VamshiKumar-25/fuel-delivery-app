@@ -19,7 +19,7 @@ app.use('/api/users', userRoutes);
 app.use('/api/fueltypes', fuelTypeRoutes);
 app.use('/api/orders', orderRoutes);
 
-// A simple test route to confirm the API is running
+// A simple test route for development and production
 app.get('/', (req, res) => {
     res.send('API is running successfully.');
 });
