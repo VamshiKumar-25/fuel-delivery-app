@@ -1,7 +1,6 @@
 const express = require('express');
 const router = express.Router();
 
-// Import controller functions
 const { 
   registerUser, 
   loginUser, 
@@ -11,7 +10,6 @@ const {
   updateUserProfile
 } = require('../controllers/userController.js');
 
-// Import middleware
 const { protect } = require('../middleware/authMiddleware.js');
 
 // --- Public Routes ---
@@ -21,7 +19,7 @@ router.post('/forgotpassword', forgotPassword);
 router.put('/resetpassword/:resettoken', resetPassword);
 
 // --- Private/Protected Routes ---
-router.get('/profile', protect, getUserProfile);
-router.put('/profile', protect, updateUserProfile);
+router.get('/profile', protect, getUserProfile); // Should be camelCase
+router.put('/profile', protect, updateUserProfile); // Should be camelCase
 
 module.exports = router;
