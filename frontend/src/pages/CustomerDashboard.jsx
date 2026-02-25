@@ -12,7 +12,7 @@ const CustomerDashboard = () => {
   useEffect(() => {
     const fetchFuelTypes = async () => {
       try {
-        const { data } = await axios.get('http://localhost:5001/api/fueltypes');
+        const { data } = await axios.get('https://fuel-delivery-app.onrender.com/api/fueltypes');
         setFuelTypes(data);
         setLoading(false);
       } catch (error) {
